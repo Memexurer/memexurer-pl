@@ -1,4 +1,7 @@
+import ScripTracker from 'ScripTracker';
 import { createApp } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+var app = createApp(App);
+app.config.globalProperties.scripTracker = new ScripTracker();
+app.mount('#app');
